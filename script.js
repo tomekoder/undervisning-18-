@@ -20,11 +20,31 @@ console.log(submitData)
 // 6. create a variable called inputDataValue that uses the variable inputData with the .value method.
 // add a log logging out the variable inputData inside of the function
 
+// 7. create a constant variable called displayedData that retrieves the HTML element with the ID displayed data
+// and log out the variable to verify
+
+// 8. create a constant variable called listData with the .createElement method inside the function
+//and log out the newly created variable to verify
+
+// 9. give the variable listData content from inputDataValue with the .textContent method
+
+// 10. add the new element listData to the element displayedData with the appendChild method
+
 function displayData() {
     console.log("Im working")
 
     const inputDataValue = inputData.value
     console.log(inputDataValue)
+
+    const displayedData = document.querySelector("#displayedData")
+    console.log(displayedData)
+
+    const listData = document.createElement("li")
+    console.log(listData)
+
+    listData.textContent = inputDataValue
+
+    displayedData.appendChild(listData)
 }
 
 // 4. use the variable submitData and add an event listener, listening for a click and activating the function displayData
